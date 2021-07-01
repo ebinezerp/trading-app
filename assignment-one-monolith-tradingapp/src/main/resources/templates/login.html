@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" type="text/css" th:href="@{/css/bootstrap.css}">
+</head>
+<body>
+<section class="container">
+    <div th:replace="header :: header-before-login">
+    </div>
+    <section id="main-content">
+        <div class="row">
+            <h1 class="text-center mr-auto ml-auto">Sign Up</h1>
+        </div>
+        <div class="links d-flex justify-content-center mt-5">
+            <span th:text="${error}"></span>
+            <form class="form border border-dark p-5" th:action="@{/login}" method="POST">
+                <div class="form-group">
+                    <label for="username">Username</label>
+                    <input type="text" name="username" class="form-control">
+                </div>
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <input type="password" name="password" class="form-control">
+                </div>
+                <div class="form-group">
+                    <input type="submit" value="Login" class="form-control btn btn-primary">
+                </div>
+            </form>
+        </div>
+    </section>
+</section>
+</body>
+</html>

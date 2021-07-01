@@ -1,0 +1,22 @@
+<div th:fragment="header-before-login">
+<header class="border-bottom border-dark p-3 m-3">
+    <nav class="nav navbar navbar-expand-lg">
+        <a href="#" class="navbar-brand">Trading App</a>
+        <ul class="navbar-nav ml-auto">
+            <li class="nav-item"><a th:href="@{/signup}" class="nav-link">Signup</a></li>
+            <li class="nav-item"><a th:href="@{/login}" class="nav-link">Login</a></li>
+        </ul>
+    </nav>
+</header>
+</div>
+
+<div th:fragment="header-after-login">
+    <header class="border-bottom border-dark p-3 m-3">
+        <nav class="nav navbar navbar-expand-lg">
+            <a href="#" class="navbar-brand">Trading App</a>
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item"><a th:href="@{/logout}" class="nav-link">Logout</a></li>
+            </ul>
+        </nav>
+    </header>
+</div>
